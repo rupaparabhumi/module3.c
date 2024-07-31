@@ -1,105 +1,59 @@
 #include<stdio.h>
 
-int main()
-{
-    printf("Studytonight - Best place to learn");
+void main(){
 
-    int n, m, c, d,E, first[10][10], second[10][10], thired[10][10],sum[10][10], diff[10][10],multi[10][10];
-    printf("Enter the number of rows and columns of the first matrix \n\n");
-    scanf("%d%d", &m, &n);
-
-    printf("\nEnter the %d elements of the first matrix \n\n", m*n);
-    for(c = 0; c < m; c++)   // to iterate the rows
-        for(d = 0; d < n; d++)   // to iterate the columns
-            scanf("%d", &first[c][d][E]);
-
-
-    printf("\nEnter the %d elements of the second matrix \n\n", m*n);
-    for(c = 0; c < m; c++)   // to iterate the rows
-        for(d = 0; d < n; d++)   // to iterate the columns
-            scanf("%d", &second[c][d][E]);
-
-printf("\nEnter the %d elements of the second matrix \n\n", m*n);
-    for(c = 0; c < m; c++)   // to iterate the rows
-        for(d = 0; d < n; d++)   // to iterate the columns
-            scanf("%d", &thired[c][d][E]);
-
-
-
-    /*
-        printing the first matrix
-    */
-    printf("\n\nThe first matrix is: \n\n");
-    for(c = 0; c < m; c++)   // to iterate the rows
-    {
-        for(d = 0; d < n; d++)   // to iterate the columns
-        {
-            printf("%d\t", first[c][d][E});
+int A1[2][2]={
+     {10,20},
+     {30,40},
+};
+int A2[2][2]={
+     {20,50},
+     {10,80},
+};
+int b[2][2];
+//Addition
+printf("matrix Addition\n");
+for(int i=0;i<2;i++){
+    for(int E=0;E<2;E++){
+        b[i][E]=0;
+        b[i][E]=A1[i][E]+A2[i][E];//Addition
         }
-    printf("\n");
-    }
-
-    /*
-        printing the second matrix
-    */
-    printf("\n\nThe second matrix is: \n\n");
-    for(c = 0; c < m; c++)   // to iterate the rows
-    {
-        for(d = 0; d < n; d++)   // to iterate the columns
-        {
-            printf("%d\t", second[c][d][E]);
-        }
-    printf("\n");
-    }
-
-    /*
-        finding the SUM of the two matrices
-        and storing in another matrix sum of the same size
-    */
-    for(c = 0; c < m; c++)
-        for(d = 0; d < n; d++)
-            sum[c][d] = first[c][d] + second[c][d][E];
-
-    // printing the elements of the sum matrix
-    printf("\n\nThe sum of the two entered matrices is: \n\n");
-    for(c = 0; c < m; c++)
-    {
-        for(d = 0; d < n; d++)
-        {
-            printf("%d\t", sum[c][d][E]);
-        }
-        printf("\n");
-    }
-
-    /*
-        finding the DIFFERENCE of the two matrices
-        and storing in another matrix difference of the same size
-    */
-    for(c = 0; c < m; c++)
-        for(d = 0; d < n; d++)
-            diff[c][d] = first[c][d] - second[c][d][E];
-
-    // printing the elements of the diff matrix
-    printf("\n\nThe subtraction of the two entered matrices is: \n\n");
-    for(c = 0; c < m; c++)
-    {
-        for(d = 0; d < n; d++)
-        {
-            printf("%d\t", sub[c][d][E]);
-        }
-        printf("\n");
-    }
-
-  printf("\n\nThe multiplication of the two entered matrices is: \n\n");
-    for(c = 0; c < m; c++)
-    {
-        for(d = 0; d < n; d++)
-        {
-            printf("%d\t", mul[c][d][E]);
-        }
-        printf("\n");
-    }
-
-
-    return 0;
 }
+for(int i=0;i<2;i++){
+    for(int E=0;E<2;E++){
+        printf("%d",b[i][E]);
+    }
+    printf("\n");
+}
+//subtraction
+     printf("\n");
+     printf("matrix subtraction\n");
+for(int i=0;i<2;i++){
+    for(int E=0;E<2;E++){
+        b[i][E]=0;
+        b[i][E]=A1[i][E]-A2[i][E];//subtraction
+        }
+}
+for(int i=0;i<2;i++){
+    for(int E=0;E<2;E++){
+        printf("%d",b[i][E]);
+    }
+    printf("\n");
+}
+//multiplication
+     printf("\n");
+     printf("matrix multiplication\n");
+for(int i=0;i<2;i++){
+    for(int E=0;E<2;E++){
+        b[i][E]=0;
+        b[i][E]=A1[i][E]*A2[i][E];//multiplication
+        }
+}
+for(int i=0;i<2;i++){
+    for(int E=0;E<2;E++){
+        printf("%d",b[i][E]);
+    }
+    printf("\n");
+}
+}
+
